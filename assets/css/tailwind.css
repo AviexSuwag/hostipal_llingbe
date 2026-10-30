@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@import "./mobile-layout.css";
+
+@source "../../views/**/*.php";
+@source "../../patient-portal.php";
+@source "../js/**/*.js";

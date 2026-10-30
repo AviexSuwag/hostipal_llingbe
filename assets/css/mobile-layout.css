@@ -1,0 +1,127 @@
+html,
+body {
+    max-width: 100%;
+}
+
+img,
+video,
+iframe,
+canvas {
+    max-width: 100%;
+}
+
+@media (max-width: 639px) {
+    html,
+    body {
+        overflow-x: clip;
+    }
+
+    main,
+    main > *,
+    main section,
+    main form,
+    main article {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    main {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+    }
+
+    main :where(p, a, button, label, th, td, h1, h2, h3, span) {
+        overflow-wrap: anywhere;
+    }
+
+    main :where(input, select, textarea) {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    main .flex {
+        flex-wrap: wrap;
+    }
+
+    main .flex > * {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .mobile-card-table-wrapper {
+        overflow-x: visible !important;
+    }
+
+    table.mobile-card-table,
+    table.mobile-card-table tbody,
+    table.mobile-card-table tr,
+    table.mobile-card-table td,
+    table.mobile-card-table th {
+        display: block;
+        width: 100%;
+    }
+
+    table.mobile-card-table {
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+    table.mobile-card-table thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    table.mobile-card-table tbody {
+        display: grid;
+        gap: 0.75rem;
+        padding: 0.75rem;
+    }
+
+    table.mobile-card-table tbody tr {
+        overflow: hidden;
+        border: 1px solid #e2e8f0;
+        border-radius: 0.75rem;
+        background: #fff;
+    }
+
+    table.mobile-card-table tbody td,
+    table.mobile-card-table tbody th {
+        display: grid;
+        grid-template-columns: minmax(5.25rem, 34%) minmax(0, 1fr);
+        align-items: start;
+        gap: 0.5rem;
+        padding: 0.65rem 0.75rem;
+        border-bottom: 1px solid #f1f5f9;
+        text-align: left;
+        overflow-wrap: anywhere;
+    }
+
+    table.mobile-card-table tbody tr > :last-child {
+        border-bottom: 0;
+    }
+
+    table.mobile-card-table tbody td::before,
+    table.mobile-card-table tbody th::before {
+        content: attr(data-mobile-label);
+        color: #64748b;
+        font-size: 0.75rem;
+        font-weight: 600;
+        line-height: 1.25rem;
+    }
+
+    table.mobile-card-table tbody :is(td, th)[colspan] {
+        display: block;
+        text-align: center;
+    }
+
+    table.mobile-card-table tbody :is(td, th)[colspan]::before {
+        content: none;
+    }
+}
